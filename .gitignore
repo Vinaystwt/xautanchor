@@ -1,0 +1,15 @@
+# Secrets
+.env
+
+# Dependencies
+node_modules/
+dashboard/node_modules/
+dashboard/dist/
+
+# Runtime state (changes every cycle)
+portfolio-state.json
+action-log.json
+
+# OS
+.DS_Store
+*.log
