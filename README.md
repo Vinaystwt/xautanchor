@@ -93,13 +93,6 @@ XAU₮Anchor provides a verifiable record of every autonomous decision:
 - **WDK Integration Audit:** Detailed mapping of every WDK module in [WDK_INTEGRATION.md](./WDK_INTEGRATION.md).
 - **Heartbeat Log:** JSON-formatted uptime proof for 24/7 autonomous monitoring.
 
-
-## 🧪 Stress Testing & Adversarial Stress Validation
-To reach Level 7 reliability, XAU₮Anchor was subjected to synthetic market shocks:
-- **Flash Crash Simulation:** Injected a 20% instant drawdown.
-- **Result:** The `risk_monitor.js` detected the breach within 120s and engaged the **Deterministic Circuit Breaker**, overriding LLM 'HOLD' logic and forcing a defensive USDT rebalance.
-- **WDK Recovery:** System successfully re-initialized lending positions after the shock passed.
-
 ## Setup
 ```bash
 git clone https://github.com/vinaystwt/xautanchor
