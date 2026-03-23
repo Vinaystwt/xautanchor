@@ -1,6 +1,7 @@
+const { executeDataPayment } = require('./x402_payment');
 
 // --- OpenClaw Compatibility Layer ---
-const { AgentSkills } = require('./mocks/openclaw-mock');
+const { AgentSkills } = require('./skills_registry/openclaw-core');
 const skills = new AgentSkills();
 
 // Registering XAU₮Anchor core capabilities

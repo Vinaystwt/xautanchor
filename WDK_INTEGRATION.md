@@ -38,3 +38,9 @@ Mainnet-ready swap logic for the XAU₮/USDT pair.
 - [x] **Multi-Protocol:** Orchestrates both Lending and Swapping in a single agent loop.
 - [x] **Chain Agnostic:** Configured for Polygon Amoy (80002) but compatible with any WDK-supported EVM chain.
 - [x] **Error Handling:** Implements WDK-specific try/catch blocks for transaction reverts.
+
+## 🔐 V3 Architectural Roadmap: Institutional Trust
+While V2 implements deterministic JS middleware, we acknowledge the execution boundary limitations inherent to off-chain Node.js environments. Our production roadmap addresses this via:
+1. **TEE Deployment (Trusted Execution Environment):** `risk_monitor.js` and `swapper.js` are architected to be deployed within AWS Nitro Enclaves. This ensures cryptographic attestation before WDK signs transactions, preventing host-level tampering.
+2. **On-Chain Policy Verifier:** Transitioning the 1% slippage and 80% XAU₮ caps from JS middleware to a minimal Solidity `PolicyVerifier` contract enforced at the WDK transaction level.
+3. **Reflexive Confidence Mitigation:** The Groq LLM's self-reported confidence score will be deprecated in favor of a deterministic signal-agreement heuristic across the multi-source oracle cascade.
