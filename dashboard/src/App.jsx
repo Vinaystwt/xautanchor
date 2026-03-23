@@ -33,7 +33,16 @@ const Ic={
 function AnchorLogo({size=34}){return<svg width={size} height={size} viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke={T.gold} strokeWidth="1.5" fill={T.gold+'10'}/><circle cx="20" cy="11" r="3" fill={T.gold}/><line x1="20" y1="14" x2="20" y2="30" stroke={T.gold} strokeWidth="2.5" strokeLinecap="round"/><line x1="11" y1="20" x2="29" y2="20" stroke={T.gold} strokeWidth="2.5" strokeLinecap="round"/><path d="M11 30 Q11 26 20 28 Q29 26 29 30" stroke={T.teal} strokeWidth="2.5" strokeLinecap="round" fill="none"/><circle cx="11" cy="20" r="2" fill={T.teal}/><circle cx="29" cy="20" r="2" fill={T.teal}/></svg>}
 
 const Card=({children,style={},glow=false})=>
-    <div className='bg-green-900/20 text-green-400 px-3 py-1 rounded-full text-xs border border-green-500/30 flex items-center gap-2'>
+    
+    <div className='scudo-banner' style={{ background: 'linear-gradient(90deg, #1e293b 0%, #334155 100%)', border: '1px solid #fbbf24', color: '#fbbf24', padding: '12px', borderRadius: '8px', marginBottom: '20px', fontWeight: 'bold', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ height: '8px', width: '8px', backgroundColor: '#10b981', borderRadius: '50%', display: 'inline-block', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}></span>
+            Tether Ecosystem Alignment: V1.3
+        </span>
+        <span>Treasury Accounting: SCUDO (1 XAU₮ = 1000 Scudo)</span>
+    </div>
+    
+<div className='bg-green-900/20 text-green-400 px-3 py-1 rounded-full text-xs border border-green-500/30 flex items-center gap-2'>
         <span className='w-2 h-2 bg-green-500 rounded-full animate-pulse'></span>
         Agent Active: {Math.floor((Date.now() - (window.startTime || Date.now())) / 3600000)}h {Math.floor(((Date.now() - (window.startTime || Date.now())) / 60000) % 60)}m
     </div>

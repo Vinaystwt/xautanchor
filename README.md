@@ -11,6 +11,9 @@
 ---
 
 ## What It Does
+### Native Scudo Accounting (Tether Ecosystem Alignment)
+XAU₮Anchor is built for the future of Tether's gold ecosystem. All internal XAU₮ treasury balances and Risk Monitor thresholds are strictly denominated in **Scudo** (1 XAU₮ = 1000 Scudo). This aligns directly with Tether's upcoming WDK unit-of-account standards for micro-treasury management, proving ecosystem fluency beyond basic API wrappers.
+
 
 XAU₮Anchor is a fully autonomous DeFi treasury agent that dynamically manages
 a three-asset portfolio — USDT, XAU₮ (Tether Gold), and Aave V3 aUSDT — with
