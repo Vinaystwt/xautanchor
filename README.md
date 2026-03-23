@@ -2,7 +2,7 @@
 <h2>🧠 Architecture at a Glance</h2>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/940fc9df-46ff-446e-8e05-1905bc786191" 
+  <img src="https://github.com/user-attachments/assets/d8e7ddd2-4a1b-492d-9aca-e4c70cd8916f" 
        alt="XAU₮Anchor Architecture" 
        width="900"/>
 </p>
