@@ -32,17 +32,6 @@ XAU₮Anchor is a fully autonomous DeFi treasury agent that dynamically manages 
 
 XAU₮Anchor executes tasks autonomously, manages capital, and interacts with on-chain logic (WDK-native Aave V3 lending, x402 micropayments) under strictly defined constraints. Builders defined the rules. The agent does the work. Value settles on-chain.
 
-| Metric | Value |
-|--------|-------|
-| Cycles completed | 14+ |
-| Hedge actions | 8 |
-| Aave V3 TXs | 3 confirmed on-chain |
-| Avg LLM confidence | 8.3/10 |
-| Equity curve | +27.81% during Extreme Fear |
-| Agent status | Running autonomously |
-
-
-## 🛡️ Sovereign Architecture & Cryptographic Trust
 To elevate XAU₮Anchor from a trading script to institutional-grade economic infrastructure, V1.3 introduces four critical trust layers:
 1. **AI-to-AI Governance (Multi-Sig):** Execution is decoupled from risk. The primary agent cannot execute trades without a cryptographic co-signature from an independent, sovereign Risk Node.
 2. **Zero-Knowledge Intent Proofs:** Before any WDK transaction is signed, the agent generates a SHA-256 cryptographic commitment of its LLM reasoning (), establishing a verifiable off-chain prep layer.
