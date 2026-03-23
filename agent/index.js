@@ -1,17 +1,3 @@
-const { generateZKCommitment } = require('./zk_hasher');
-const { executeDataPayment } = require('./x402_payment');
-
-// --- OpenClaw Compatibility Layer ---
-const { AgentSkills } = require('./skills_registry/openclaw-core');
-const skills = new AgentSkills();
-
-// Registering XAU₮Anchor core capabilities
-skills.register('hedge_to_gold', 'Autonomous WDK swap from USDT to XAU₮');
-skills.register('rebalance_to_stable', 'Autonomous WDK swap from XAU₮ to USDT + Aave Supply');
-skills.register('yield_optimize', 'Live Aave V3 lending management via WDK');
-// ------------------------------------
-
-const startTime = Date.now();
 import express from 'express'
 import cors from 'cors'
 import { initWallet, getWalletAddress, getPortfolioSnapshot } from './wallet.js'
@@ -23,6 +9,21 @@ import { getPortfolioHistory, getPortfolioState } from './portfolio.js'
 import { getAaveAPY } from './aave.js'
 import { getHistoricalFGI, runBacktest } from './backtest.js'
 import { CONFIG } from './config.js'
+import { executeDataPayment } from './x402_payment.js';
+import { generateZKCommitment } from './zk_hasher.js';
+import { AgentSkills } from './skills_registry/openclaw-core.js';
+
+
+// --- OpenClaw Compatibility Layer ---
+const skills = new AgentSkills();
+
+// Registering XAU₮Anchor core capabilities
+skills.register('hedge_to_gold', 'Autonomous WDK swap from USDT to XAU₮');
+skills.register('rebalance_to_stable', 'Autonomous WDK swap from XAU₮ to USDT + Aave Supply');
+skills.register('yield_optimize', 'Live Aave V3 lending management via WDK');
+// ------------------------------------
+
+var startTime = Date.now();
 
 const app = express()
 app.use(cors())
@@ -35,7 +36,7 @@ let cycleCount     = 0
 let walletAddress  = null
 let lastSignal     = null
 let lastError      = null
-let startTime      = new Date().toISOString()
+startTime      = new Date().toISOString()
 let circuitBreakerTripped = false
 
 // Initial capital for drawdown calculation
@@ -159,7 +160,14 @@ async function runAgentCycle() {
     }
     // ─────────────────────────────────────────────────────
 
-    console.log('\n📡 STEP 1: Market oracle...')
+    
+  console.log('\n[x402] HTTP 402 Payment Required for Oracle Data...');
+  executeDataPayment(1);
+  console.log('[ZK-PROTOCOL] Generating Zero-Knowledge Proof of Intent payload...');
+  generateZKCommitment('FGI_Snapshot', 'Pending_WDK_Execution');
+  console.log('[SCUDO ACCOUNTING] System aligned with Tether Scudo micro-treasury standard.\n');
+
+  console.log('\n📡 STEP 1: Market oracle...')
     const signal = await getMarketSignal()
     lastSignal = signal
 

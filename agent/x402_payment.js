@@ -1,7 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-function executeDataPayment(cycleNumber) {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export function executeDataPayment(cycleNumber) {
     console.log('[x402] HTTP 402 Payment Required for Oracle Data...');
     console.log('[x402] WDK Wallet signing $0.001 USDT micropayment authorization...');
     
@@ -25,5 +29,3 @@ function executeDataPayment(cycleNumber) {
     console.log('[x402] Payment accepted. Data stream unlocked.');
     return true;
 }
-
-module.exports = { executeDataPayment };

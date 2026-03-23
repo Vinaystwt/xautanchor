@@ -9,4 +9,4 @@ class AgentSkills {
     console.log(`OPENCLAW_MOCK: Skill Registered -> ${name}: ${description}`);
   }
 }
-module.exports = { AgentSkills };
+export { AgentSkills };
