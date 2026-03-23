@@ -7,6 +7,7 @@ import { executeHedge, executeRebalance, executeHold } from './swapper.js'
 import { getLogs } from './logger.js'
 import { getPortfolioHistory, getPortfolioState } from './portfolio.js'
 import { getAaveAPY } from './aave.js'
+import { getHistoricalFGI, runBacktest } from './backtest.js'
 import { CONFIG } from './config.js'
 
 const app = express()
