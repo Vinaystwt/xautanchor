@@ -32,7 +32,13 @@ const Ic={
 
 function AnchorLogo({size=34}){return<svg width={size} height={size} viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke={T.gold} strokeWidth="1.5" fill={T.gold+'10'}/><circle cx="20" cy="11" r="3" fill={T.gold}/><line x1="20" y1="14" x2="20" y2="30" stroke={T.gold} strokeWidth="2.5" strokeLinecap="round"/><line x1="11" y1="20" x2="29" y2="20" stroke={T.gold} strokeWidth="2.5" strokeLinecap="round"/><path d="M11 30 Q11 26 20 28 Q29 26 29 30" stroke={T.teal} strokeWidth="2.5" strokeLinecap="round" fill="none"/><circle cx="11" cy="20" r="2" fill={T.teal}/><circle cx="29" cy="20" r="2" fill={T.teal}/></svg>}
 
-const Card=({children,style={},glow=false})=><div style={{background:T.bgCard,border:`1px solid ${glow?T.borderActive:T.borderSubtle}`,borderRadius:16,boxShadow:glow?`0 0 28px ${T.gold}15`:'0 2px 8px rgba(0,0,0,0.5)',...style}}>{children}</div>
+const Card=({children,style={},glow=false})=>
+    <div className='bg-green-900/20 text-green-400 px-3 py-1 rounded-full text-xs border border-green-500/30 flex items-center gap-2'>
+        <span className='w-2 h-2 bg-green-500 rounded-full animate-pulse'></span>
+        Agent Active: {Math.floor((Date.now() - (window.startTime || Date.now())) / 3600000)}h {Math.floor(((Date.now() - (window.startTime || Date.now())) / 60000) % 60)}m
+    </div>
+    
+<div style={{background:T.bgCard,border:`1px solid ${glow?T.borderActive:T.borderSubtle}`,borderRadius:16,boxShadow:glow?`0 0 28px ${T.gold}15`:'0 2px 8px rgba(0,0,0,0.5)',...style}}>{children}</div>
 const SLabel=({children,icon:I,color=T.textSecondary})=><div style={{display:'flex',alignItems:'center',gap:6,marginBottom:12}}>{I&&<span style={{color,opacity:0.8,display:'flex'}}><I/></span>}<span style={{fontSize:11,fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',color}}>{children}</span></div>
 
 function StatusPill({status}){

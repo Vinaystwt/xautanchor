@@ -1,3 +1,4 @@
+const startTime = Date.now();
 import express from 'express'
 import cors from 'cors'
 import { initWallet, getWalletAddress, getPortfolioSnapshot } from './wallet.js'
@@ -235,3 +236,30 @@ async function start() {
 
 start().catch(err => { console.error('Fatal:', err); process.exit(1) })
 
+
+
+function logHeartbeat(cycleNumber, status = 'COMPLETED') {
+  const fs = require('fs');
+  const path = require('path');
+  const logPath = path.join(__dirname, '../heartbeat-log.json');
+  let logs = [];
+  if (fs.existsSync(logPath)) {
+    try { logs = JSON.parse(fs.readFileSync(logPath)); } catch(e) { logs = []; }
+  }
+  logs.push({
+    timestamp: new Date().toISOString(),
+    cycleNumber,
+    uptimeSeconds: Math.floor((Date.now() - startTime) / 1000),
+    status
+  });
+  if (logs.length > 100) logs.shift();
+  fs.writeFileSync(logPath, JSON.stringify(logs, null, 2));
+}
+
+app.get('/api/heartbeat', (req, res) => {
+  const fs = require('fs');
+  const path = require('path');
+  const logPath = path.join(__dirname, '../heartbeat-log.json');
+  if (fs.existsSync(logPath)) res.json(JSON.parse(fs.readFileSync(logPath)));
+  else res.json([]);
+});
