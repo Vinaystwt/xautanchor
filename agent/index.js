@@ -10,7 +10,7 @@ import { getAaveAPY } from './aave.js'
 import { getHistoricalFGI, runBacktest } from './backtest.js'
 import { CONFIG } from './config.js'
 import { executeDataPayment } from './x402_payment.js';
-import { generateZKCommitment } from './zk_hasher.js';
+import { generatePreCommitment } from './pre_commit_hasher.js';
 import { AgentSkills } from './skills_registry/openclaw-core.js';
 
 
@@ -163,8 +163,8 @@ async function runAgentCycle() {
     
   console.log('\n[x402] HTTP 402 Payment Required for Oracle Data...');
   executeDataPayment(1);
-  console.log('[ZK-PROTOCOL] Generating Zero-Knowledge Proof of Intent payload...');
-  generateZKCommitment('FGI_Snapshot', 'Pending_WDK_Execution');
+  console.log('[PRE-COMMITMENT] Generating Cryptographic Pre-Commitment payload...');
+  generatePreCommitment('FGI_Snapshot', 'Pending_WDK_Execution');
   console.log('[SCUDO ACCOUNTING] System aligned with Tether Scudo micro-treasury standard.\n');
 
   console.log('\n📡 STEP 1: Market oracle...')

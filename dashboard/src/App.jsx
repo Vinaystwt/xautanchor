@@ -49,11 +49,11 @@ const Card=({children,style={},glow=false})=>
         </div>
         <div style={{ background: '#0f172a', padding: '10px', borderRadius: '6px', borderLeft: '4px solid #8b5cf6', color: '#94a3b8', fontSize: '0.9rem' }}>
             <span style={{ color: '#f8fafc', fontWeight: 'bold', display: 'block' }}>Governance</span>
-            AI Multi-Sig Risk Node: Online
+            Sovereign Co-Signer Gate: Online
         </div>
         <div style={{ background: '#0f172a', padding: '10px', borderRadius: '6px', borderLeft: '4px solid #3b82f6', color: '#94a3b8', fontSize: '0.9rem' }}>
             <span style={{ color: '#f8fafc', fontWeight: 'bold', display: 'block' }}>Agent Privacy</span>
-            ZK-Intent Proofs: Generating
+            Pre-Commitment Hash: Generating
         </div>
     </div>
     

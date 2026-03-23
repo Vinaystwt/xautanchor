@@ -3,5 +3,20 @@
     "timestamp": "2026-03-23T17:26:33.657Z",
     "zkCommitmentHash": "0xba01c27f260960fd15972c6e001e458406dd00a71edad9f7bcb7e077a42aa333",
     "status": "Ready for On-Chain Verifier Contract"
+  },
+  {
+    "timestamp": "2026-03-23T17:31:38.158Z",
+    "zkCommitmentHash": "0xd0e6c0ef25fe519c0ca638f0311caaa60fdba6ef78f7a51d14abe7397eb100ac",
+    "status": "Ready for On-Chain Verifier Contract"
+  },
+  {
+    "timestamp": "2026-03-23T17:36:38.155Z",
+    "zkCommitmentHash": "0xb4944a9734a0fda053bf69c557ec890d3d396ef2135d4aad2342c3d0990b430c",
+    "status": "Ready for On-Chain Verifier Contract"
+  },
+  {
+    "timestamp": "2026-03-23T17:41:38.172Z",
+    "zkCommitmentHash": "0x43904408256d371acd532f06771ccb60bf16bfce06d31521a43c0060e0289757",
+    "status": "Ready for On-Chain Verifier Contract"
   }
 ]

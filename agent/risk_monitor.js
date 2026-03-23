@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('--- AI-ONLY GOVERNANCE: SOVEREIGN RISK NODE ACTIVE ---');
-console.log('STATUS: Awaiting WDK Multi-Sig Proposals from Execution Agent...');
+console.log('STATUS: Awaiting Sovereign Co-Signer Proposals from Execution Agent...');
 
 const WATCHDOG_WALLET = '0x' + crypto.randomBytes(20).toString('hex');
 
@@ -20,7 +20,7 @@ function checkRisk() {
       
       if (drawdown >= 15) {
         console.error('\n🚨 [GOVERNANCE REJECTED] 15% Drawdown Breach Detected.');
-        console.log(`[WDK MULTI-SIG] Node ${WATCHDOG_WALLET.substring(0,8)} REFUSING SIGNATURE.`);
+        console.log(`[SOVEREIGN CO-SIGNER] Node ${WATCHDOG_WALLET.substring(0,8)} REFUSING SIGNATURE.`);
         console.log('[ACTION] Initiating Emergency XAU₮/Scudo Capital Preservation Protocol...\n');
         
         // Reset the drawdown so it doesn't spam infinitely after catching it
