@@ -1,3 +1,17 @@
+
+function validateDecision(decision, portfolio) {
+  const checks = [];
+  if (decision.targetXAUTPercent > 80) {
+    decision.targetXAUTPercent = 80;
+    checks.push('MAX_ALLOCATION_CAPPED');
+  }
+  if (decision.confidence < 4) {
+    decision.action = 'HOLD';
+    checks.push('LOW_CONFIDENCE_OVERRIDDEN');
+  }
+  return { decision, guardrailsApplied: checks };
+}
+
 import { getPortfolioSnapshot, executeSwap, executeAaveSupply, executeAaveWithdraw } from './wallet.js'
 import { logAction } from './logger.js'
 import { CONFIG } from './config.js'

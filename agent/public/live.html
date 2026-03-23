@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XAU₮Anchor | Live Agent Heartbeat</title>
+    <meta http-equiv="refresh" content="30">
+    <style>
+        body { background: #0f172a; color: #f8fafc; font-family: sans-serif; padding: 40px; }
+        .card { background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; margin-bottom: 20px; }
+        .status { color: #10b981; font-weight: bold; }
+        .reasoning { font-style: italic; color: #94a3b8; }
+        h1 { color: #fbbf24; }
+    </style>
+</head>
+<body>
+    <h1>XAU₮Anchor Live Heartbeat</h1>
+    <div class="card">
+        <p>Status: <span class="status">RUNNING AUTONOMOUSLY</span></p>
+        <p>Last Pulse: <span id="time"></span></p>
+    </div>
+    <div class="card">
+        <h3>Active Strategy</h3>
+        <p class="reasoning">"Monitoring market volatility and Aave yield spreads. Circuit breaker active at 15% drawdown."</p>
+    </div>
+    <script>document.getElementById('time').innerText = new Date().toLocaleString();</script>
+</body>
+</html>
