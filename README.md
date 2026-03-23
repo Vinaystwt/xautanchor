@@ -1,4 +1,13 @@
 # ⚓ XAU₮Anchor — Autonomous Gold-Hedge DeFi Agent
+<h2>🧠 Architecture at a Glance</h2>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/940fc9df-46ff-446e-8e05-1905bc786191" 
+       alt="XAU₮Anchor Architecture" 
+       width="900"/>
+</p>
+
+<p align="center"><i>Multi-agent sovereign execution system with cryptographic guarantees</i></p>
 
 > The only autonomous agent that treats XAU₮ as a live economic instrument — not a static holding.
 
