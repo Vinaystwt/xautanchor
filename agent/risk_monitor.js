@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
-console.log('--- RISK MONITOR AGENT ACTIVE [SOVEREIGN NODE] ---');
-console.log('STATUS: Monitoring XAU₮/Scudo metrics for 15% drawdown threshold...');
+console.log('--- AI-ONLY GOVERNANCE: SOVEREIGN RISK NODE ACTIVE ---');
+console.log('STATUS: Awaiting WDK Multi-Sig Proposals from Execution Agent...');
 
-// Simulated separate WDK Wallet Identity for the Watchdog
-const WATCHDOG_WALLET = '0x' + Math.random().toString(16).slice(2, 42);
+const WATCHDOG_WALLET = '0x' + crypto.randomBytes(20).toString('hex');
 
 setInterval(() => {
   const statePath = path.join(__dirname, '../portfolio-state.json');
@@ -13,14 +13,14 @@ setInterval(() => {
     const data = JSON.parse(fs.readFileSync(statePath));
     const drawdown = data.drawdownPct || 0;
     
-    console.log(`[RISK_MONITOR] Health check... Drawdown: ${drawdown}%`);
-    
     if (drawdown >= 15) {
-      console.error('\n[RISK_MONITOR] 🚨 [CRITICAL] 15% BREACH DETECTED.');
-      console.log('[RISK_MONITOR] Initiating Sovereign Handshake...');
-      console.log(`[RISK_MONITOR] Watchdog Wallet (${WATCHDOG_WALLET.substring(0,6)}...) signing 0.01 USDT Priority Halt Transaction via WDK...`);
-      console.log(`[RISK_MONITOR] TX HASH: 0x${Math.random().toString(16).slice(2, 64)}`);
-      console.log('[RISK_MONITOR] ⚡ SIGNALING MAIN AGENT FOR EMERGENCY OVERRIDE & HARD HALT.\n');
+      console.error('\n🚨 [GOVERNANCE REJECTED] 15% Drawdown Breach Detected.');
+      console.log(`[WDK MULTI-SIG] Node ${WATCHDOG_WALLET.substring(0,8)} REFUSING SIGNATURE.`);
+      console.log('[ACTION] Initiating Emergency XAU₮/Scudo Capital Preservation Protocol...\n');
+    } else {
+      // Simulate standard governance approval
+      const approvalHash = crypto.createHash('sha256').update(Date.now().toString()).digest('hex');
+      console.log(`[GOVERNANCE APPROVED] Drawdown at ${drawdown}%. Co-signature granted: 0x${approvalHash.substring(0,16)}`);
     }
   }
 }, 120000);

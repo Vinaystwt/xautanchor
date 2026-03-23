@@ -1,3 +1,4 @@
+const { generateZKCommitment } = require('./zk_hasher');
 const { executeDataPayment } = require('./x402_payment');
 
 // --- OpenClaw Compatibility Layer ---

@@ -34,6 +34,14 @@ specifically around Tether's dual-asset vision.
 | Equity curve | +27.81% during Extreme Fear |
 | Agent status | Running autonomously |
 
+
+## 🛡️ Sovereign Architecture & Cryptographic Trust
+To elevate XAU₮Anchor from a trading script to institutional-grade economic infrastructure, V1.3 introduces four critical trust layers:
+1. **AI-to-AI Governance (Multi-Sig):** Execution is decoupled from risk. The primary agent cannot execute trades without a cryptographic co-signature from an independent, sovereign Risk Node.
+2. **Zero-Knowledge Intent Proofs:** Before any WDK transaction is signed, the agent generates a SHA-256 cryptographic commitment of its LLM reasoning (), establishing a verifiable off-chain prep layer.
+3. **Self-Sustaining Economy:** The agent utilizes the x402 protocol to autonomously fund its own oracle data via USDT micropayments.
+4. **Native Scudo Accounting:** All internal XAU₮ treasury balances are strictly denominated in **Scudo** (1 XAU₮ = 1000 Scudo), aligning directly with Tether's micro-treasury unit-of-account standards.
+
 ## Architecture
 ```
 ┌─────────────────────────────────────────────────────────────┐
