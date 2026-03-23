@@ -1,3 +1,14 @@
+
+// --- OpenClaw Compatibility Layer ---
+const { AgentSkills } = require('./mocks/openclaw-mock');
+const skills = new AgentSkills();
+
+// Registering XAU₮Anchor core capabilities
+skills.register('hedge_to_gold', 'Autonomous WDK swap from USDT to XAU₮');
+skills.register('rebalance_to_stable', 'Autonomous WDK swap from XAU₮ to USDT + Aave Supply');
+skills.register('yield_optimize', 'Live Aave V3 lending management via WDK');
+// ------------------------------------
+
 const startTime = Date.now();
 import express from 'express'
 import cors from 'cors'
