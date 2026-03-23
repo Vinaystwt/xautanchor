@@ -36,7 +36,7 @@ specifically around Tether's dual-asset vision.
 ┌─────────────────────────────────────────────────────────────┐
 │  Every 5 minutes — Zero human triggers                      │
 │                                                             │
-│  Oracle → Reason → Decide → Execute → Log → Sleep → Repeat │
+│  Oracle → Reason → Decide → Execute → Log → [Watchdog Check] → Repeat │
 │  (4 src)  (Groq)  (12 rules) (WDK)  (TX hash)             │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -57,8 +57,9 @@ specifically around Tether's dual-asset vision.
 | `@tetherto/wdk-protocol-swap-velora-evm` | Wired | USDT↔XAU₮ swap — mainnet-ready |
 | WDK MCP Toolkit | Medium | LLM tool-calling interface |
 | WDK Indexer API | Medium | Real-time POL balance |
+| WDK Agent Skills | High | **OpenClaw** compatibility layer for autonomous skills |
 
-## Economic Safeguards (12 total)
+## Economic Safeguards (15 total)
 
 | # | Safeguard | What it does |
 |---|-----------|-------------|
@@ -74,6 +75,16 @@ specifically around Tether's dual-asset vision.
 | 10 | 3-source oracle cascade | Never fails on single API outage |
 | 11 | 15% drawdown circuit breaker | Emergency rebalance regardless of LLM |
 | 12 | Auto-recovery | Self-heals in 30s after any error |
+| 13 | Multi-Agent Watchdog | Independent risk_monitor.js agent runs every 120s |
+| 14 | OpenClaw Skill Wrap | Standardized skill registration for WDK orchestration |
+| 15 | Heartbeat Proof | Continuous uptime logging in heartbeat-log.json |
+
+
+## 🛡️ Trust & Transparency: The Audit Trail
+XAU₮Anchor provides a verifiable record of every autonomous decision:
+- **[DECISIONS_AUDIT.md](./DECISIONS_AUDIT.md):** A living markdown document appended by the agent in real-time.
+- **WDK Integration Audit:** Detailed mapping of every WDK module in [WDK_INTEGRATION.md](./WDK_INTEGRATION.md).
+- **Heartbeat Log:** JSON-formatted uptime proof for 24/7 autonomous monitoring.
 
 ## Setup
 ```bash
