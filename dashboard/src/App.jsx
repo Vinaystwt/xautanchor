@@ -41,6 +41,22 @@ const Card=({children,style={},glow=false})=>
         </span>
         <span>Treasury Accounting: SCUDO (1 XAU₮ = 1000 Scudo)</span>
     </div>
+
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '20px' }}>
+        <div style={{ background: '#0f172a', padding: '10px', borderRadius: '6px', borderLeft: '4px solid #10b981', color: '#94a3b8', fontSize: '0.9rem' }}>
+            <span style={{ color: '#f8fafc', fontWeight: 'bold', display: 'block' }}>x402 Economy</span>
+            Status: Active (Self-Sustaining)
+        </div>
+        <div style={{ background: '#0f172a', padding: '10px', borderRadius: '6px', borderLeft: '4px solid #8b5cf6', color: '#94a3b8', fontSize: '0.9rem' }}>
+            <span style={{ color: '#f8fafc', fontWeight: 'bold', display: 'block' }}>Governance</span>
+            AI Multi-Sig Risk Node: Online
+        </div>
+        <div style={{ background: '#0f172a', padding: '10px', borderRadius: '6px', borderLeft: '4px solid #3b82f6', color: '#94a3b8', fontSize: '0.9rem' }}>
+            <span style={{ color: '#f8fafc', fontWeight: 'bold', display: 'block' }}>Agent Privacy</span>
+            ZK-Intent Proofs: Generating
+        </div>
+    </div>
+    
     
 <div className='bg-green-900/20 text-green-400 px-3 py-1 rounded-full text-xs border border-green-500/30 flex items-center gap-2'>
         <span className='w-2 h-2 bg-green-500 rounded-full animate-pulse'></span>
