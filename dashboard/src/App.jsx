@@ -49,7 +49,7 @@ const Card=({children,style={},glow=false})=>
         </div>
         <div style={{ background: '#0f172a', padding: '10px', borderRadius: '6px', borderLeft: '4px solid #8b5cf6', color: '#94a3b8', fontSize: '0.9rem' }}>
             <span style={{ color: '#f8fafc', fontWeight: 'bold', display: 'block' }}>Governance</span>
-            Sovereign Co-Signer Gate: Online
+            Sovereign Co-Signer Gate: ACTIVE (2/2 SIGNERS ONLINE)
         </div>
         <div style={{ background: '#0f172a', padding: '10px', borderRadius: '6px', borderLeft: '4px solid #3b82f6', color: '#94a3b8', fontSize: '0.9rem' }}>
             <span style={{ color: '#f8fafc', fontWeight: 'bold', display: 'block' }}>Agent Privacy</span>

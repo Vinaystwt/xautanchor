@@ -10,6 +10,21 @@
 
 ---
 
+
+**The first fully sovereign, self-governing, Scudo-native DeFi treasury agent that pays for its own intelligence, enforces cryptographic multi-agent governance, and preserves capital with verifiable intent under Tether’s official unit of account.**
+
+## 🏆 Fulfilled Legend & Hard Bounties
+* **Self-Sustaining Agent:** x402 micropayment loop for oracle data acquisition.
+* **AI-Only Governance:** Sovereign Risk Node co-signer with cryptographic approval gates.
+* **Agent Privacy (Cryptographic Intent):** SHA-256 pre-commitments of every Groq reasoning step.
+* **Tether Ecosystem Alignment (Scudo):** 100% portfolio accounting in Scudo (1 XAU₮ = 1000 Scudo).
+
+## 🏛️ Sovereign Economic Infrastructure
+XAU₮Anchor V1.3 executes tasks autonomously (5-minute reasoning loops). It manages capital (USDT/XAU₮/aUSDT portfolio denominated in Scudo). It interacts with onchain logic (WDK-native Aave V3 lending, x402 micropayments) under clearly defined constraints (1% slippage cap, Sovereign Co-Signer approval gate). Builders defined the rules. The agent does the work. Value settles onchain.
+
+### Why Scudo?
+In January 2026, Tether introduced Scudo — one-thousandth of a troy ounce of gold. XAU₮Anchor V1.3 is the first autonomous treasury agent to denominate its portfolio, thresholds, and circuit breakers strictly in Scudo. This is not a cosmetic choice; it is a statement that this agent was designed for the monetary system Tether is actually building.
+
 ## What It Does
 ### Native Scudo Accounting (Tether Ecosystem Alignment)
 XAU₮Anchor is built for the future of Tether's gold ecosystem. All internal XAU₮ treasury balances and Risk Monitor thresholds are strictly denominated in **Scudo** (1 XAU₮ = 1000 Scudo). This aligns directly with Tether's upcoming WDK unit-of-account standards for micro-treasury management, proving ecosystem fluency beyond basic API wrappers.
@@ -98,7 +113,7 @@ XAU₮Anchor provides a verifiable record of every autonomous decision:
 - **Heartbeat Log:** JSON-formatted uptime proof for 24/7 autonomous monitoring.
 
 
-## 🧪 Stress Testing & Chaos Engineering
+## 🧪 Stress Testing & Adversarial Stress Validation
 To reach Level 7 reliability, XAU₮Anchor was subjected to synthetic market shocks:
 - **Flash Crash Simulation:** Injected a 20% instant drawdown.
 - **Result:** The `risk_monitor.js` detected the breach within 120s and engaged the **Deterministic Circuit Breaker**, overriding LLM 'HOLD' logic and forcing a defensive USDT rebalance.
@@ -170,3 +185,10 @@ Zero code changes required to run on Polygon mainnet when Velora pool exists.
 - **Backend:** Node.js v24, Express.js
 - **Frontend:** React + Vite, Recharts, pure SVG components
 - **Chain:** Polygon Amoy Testnet (Chain ID 80002)
+
+
+## 🎯 Track Coverage
+* **Agent Wallets:** WDK-native wallet instantiation for both main agent and sovereign co-signer.
+* **Autonomous DeFi Agent:** Three-asset portfolio with full autonomous rebalancing loop.
+* **Lending Bot:** Aave V3 supply/withdraw via @tetherto/wdk-protocol-lending-aave-evm.
+* **Best Overall:** Complete earn + spend + govern economic swarm architecture.
