@@ -22,32 +22,15 @@
 
 **The first fully sovereign, self-governing, Scudo-native DeFi treasury agent that pays for its own intelligence, enforces cryptographic multi-agent governance, and preserves capital with verifiable intent under Tether’s official unit of account.**
 
-## 🏆 Fulfilled Legend & Hard Bounties
-* **Self-Sustaining Agent:** x402 micropayment loop for oracle data acquisition.
-* **AI-Only Governance:** Sovereign Risk Node co-signer with cryptographic approval gates.
-* **Agent Privacy (Cryptographic Intent):** SHA-256 pre-commitments of every Groq reasoning step.
-* **Tether Ecosystem Alignment (Scudo):** 100% portfolio accounting in Scudo (1 XAU₮ = 1000 Scudo).
+## 📖 Overview
+
+XAU₮Anchor is a fully autonomous DeFi treasury agent that dynamically manages a three-asset portfolio — USDT, XAU₮ (Tether Gold), and Aave V3 aUSDT — with zero human input, executing on a 5-minute reasoning loop with a full on-chain audit trail.
+
+**Core Thesis:** Gold and crypto are anti-correlated in fear markets. XAU₮ is Tether's own gold-backed token. XAU₮Anchor is the first autonomous agent built specifically around Tether's dual-asset vision to preserve capital during periods of high volatility.
 
 ## 🏛️ Sovereign Economic Infrastructure
-XAU₮Anchor V1.3 executes tasks autonomously (5-minute reasoning loops). It manages capital (USDT/XAU₮/aUSDT portfolio denominated in Scudo). It interacts with onchain logic (WDK-native Aave V3 lending, x402 micropayments) under clearly defined constraints (1% slippage cap, Sovereign Co-Signer approval gate). Builders defined the rules. The agent does the work. Value settles onchain.
 
-### Why Scudo?
-In January 2026, Tether introduced Scudo — one-thousandth of a troy ounce of gold. XAU₮Anchor V1.3 is the first autonomous treasury agent to denominate its portfolio, thresholds, and circuit breakers strictly in Scudo. This is not a cosmetic choice; it is a statement that this agent was designed for the monetary system Tether is actually building.
-
-## What It Does
-### Native Scudo Accounting (Tether Ecosystem Alignment)
-XAU₮Anchor is built for the future of Tether's gold ecosystem. All internal XAU₮ treasury balances and Risk Monitor thresholds are strictly denominated in **Scudo** (1 XAU₮ = 1000 Scudo). This aligns directly with Tether's upcoming WDK unit-of-account standards for micro-treasury management, proving ecosystem fluency beyond basic API wrappers.
-
-
-XAU₮Anchor is a fully autonomous DeFi treasury agent that dynamically manages
-a three-asset portfolio — USDT, XAU₮ (Tether Gold), and Aave V3 aUSDT — with
-zero human input, every five minutes, with a full on-chain audit trail.
-
-**Core thesis:** Gold and crypto are anti-correlated in fear markets. XAU₮ is
-Tether's own gold-backed token. XAU₮Anchor is the first autonomous agent built
-specifically around Tether's dual-asset vision.
-
-## Live Demo Stats
+XAU₮Anchor executes tasks autonomously, manages capital, and interacts with on-chain logic (WDK-native Aave V3 lending, x402 micropayments) under strictly defined constraints. Builders defined the rules. The agent does the work. Value settles on-chain.
 
 | Metric | Value |
 |--------|-------|
